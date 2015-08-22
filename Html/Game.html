@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../style/bootstrap.css" />
+	    <script type="text/javascript" src="../lib/angular.min.js"></script>
+	    <script type="text/javascript" src="../lib/app.js"></script>
+		<div class="text-center">
+			<img src="../images/logo.png">
+		</div>
+	</head>
+	<body class="container" ng-app="ColourManagement">
+		<div ng-controller="MyGameController">
+			<div class="row" ng-repeat="card in cards">
+				<div class="col-xs-1 col-md-1" ng-repeat="image in card.images">
+					<img class="thumbnail" src={{bg_colour}} ng-click="select"/>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
